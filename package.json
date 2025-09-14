@@ -1,0 +1,17 @@
+{
+  "name": "codexsandbox",
+  "version": "1.0.0",
+  "description": "Just a sandbox environment for playing around with ChatGPT Codex",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node -e \"console.log('No tests yet');\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
