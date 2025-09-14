@@ -26,11 +26,16 @@ async function addTodo(title) {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ title })
   });
+  celebrate('Added task! 🎉');
   fetchTodos();
 }
 
 async function toggleTodo(id) {
-  await fetch(`/todos/${id}/toggle`, { method: 'POST' });
+  const res = await fetch(`/todos/${id}/toggle`, { method: 'POST' });
+  const todo = await res.json();
+  if (todo.completed) {
+    celebrate('Completed! ✅');
+  }
   fetchTodos();
 }
 
@@ -46,3 +51,15 @@ form.addEventListener('submit', (e) => {
 });
 
 window.addEventListener('DOMContentLoaded', fetchTodos);
+
+function celebrate(message) {
+  const banner = document.getElementById('celebration');
+  if (banner) {
+    banner.textContent = message;
+    banner.style.display = 'block';
+    confetti({ spread: 100, ticks: 60 });
+    setTimeout(() => {
+      banner.style.display = 'none';
+    }, 2000);
+  }
+}
