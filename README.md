@@ -23,6 +23,10 @@ The server will start on port 3000 (or the port specified in the `PORT` environm
 
 Todos are stored in memory and will reset each time the server restarts.
 
+### Frontend
+
+A minimal frontend is available. After starting the server, open `http://localhost:3000/` in your browser to manage todos.
+
 ### Example
 
 ```bash
