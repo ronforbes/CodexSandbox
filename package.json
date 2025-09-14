@@ -1,0 +1,20 @@
+{
+  "name": "codexsandbox",
+  "version": "1.0.0",
+  "description": "Just a sandbox environment for playing around with ChatGPT Codex",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
