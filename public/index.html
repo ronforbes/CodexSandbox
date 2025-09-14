@@ -4,14 +4,55 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Todo App</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+      background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    button {
+      background-color: #ff4757;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #ff6b81;
+    }
+
+    #celebration {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #fff;
+      padding: 10px 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      display: none;
+      font-size: 1.2em;
+    }
+  </style>
 </head>
 <body>
+  <div id="celebration"></div>
   <h1>Todo App</h1>
   <form id="new-todo-form">
     <input type="text" id="new-todo-title" placeholder="What needs to be done?" required />
     <button type="submit">Add Todo</button>
   </form>
   <ul id="todo-list"></ul>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
